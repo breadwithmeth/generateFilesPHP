@@ -31,6 +31,10 @@ $pdf->SetFont('dejavusans', '', 10);
 $pdf->AddPage();
 // output the HTML content
 $pdf->writeHTML($table, true, false, true, false, '');
-$pdf->Output('example_006.pdf', 'I');
+$pdf->Output('test.pdf', 'D');
+//print_f($pdf);
+
+
+
 
 ?>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+
+</head>
+<body>
+    <form method="POST" action="#" id="formSendNumber">
+        <input name="phone" type="text">
+        <input type="submit" value=""></form>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            $("#formSendNumber").submit(function(event){
+    event.preventDefault();
+	    let form_data = new FormData();
+        form_data.append('phone', '87054810862');
+	    //alert(file_data);
+
+    
+    $.ajax({
+        type: "POST",
+        url: "flashcall.php",
+        data: form_data,
+        processData: false,
+        contentType: false,
+        cache: false,
+                   
+            
+            mimeType: 'multipart/form-data',
+
+        success: function(data){
+            console.log(data)
+        }
+    })
+})
+        </script>
+</body>
+</html>

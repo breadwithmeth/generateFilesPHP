@@ -11,6 +11,6 @@ for($i=1; $i<100; $i++){
 
 $writer = new XLSXWriter();
 $writer->writeSheet($table);
-$writer->writeToFile('output.xlsx');
+$writer->writeToFile('output.xls');
 ?>
 
